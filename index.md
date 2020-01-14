@@ -2,6 +2,7 @@
 
 * Ry Lowry (lowryrs@unk.edu)
 * [Slack](https://cybr406-2020.slack.com)
+* [Syllabus](/files/cybr406-syllabus-2020.pdf)
 
 # Resources
 
