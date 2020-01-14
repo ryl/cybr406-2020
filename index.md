@@ -18,8 +18,9 @@
 
 # Class Log
 
-| Date | Topic | Notes | Demos | Homework | Due |
-|------|-------|-------|-------|----------|-----|
+| Date | Topic | Notes |
+|------|-------|-------|
+| 01-14-2020 | Class Introduction | Introduced class and started discussing requests.
 
 # Class Topics
 
