@@ -15,6 +15,7 @@
 * [7Zip][] - Unzip archives easily.
 * [Putty][] - If you want to try manually crafting requests.
 * [Postman][] - A nice REST GUI.
+* [Atom][] - A good text editor.
 * [Git][] - Version control.
 
 # Class Log
@@ -76,6 +77,7 @@
 [IntelliJ Community Edition]: https://www.jetbrains.com/idea/
 [7Zip]: https://www.7-zip.org/
 [Putty]: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+[Atom]: https://atom.io/
 
 <!-- Notes -->
 [Database Migrations]: /notes/database-migrations.md
