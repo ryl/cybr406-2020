@@ -12,7 +12,7 @@
 # Software
 
 * [IntelliJ Community Edition][] - The IDE we will use in class.
-* [7Zip][] - Unzip stuff archives easily.
+* [7Zip][] - Unzip archives easily.
 * [Putty][] - If you want to try manually crafting requests.
 * [Postman][] - A nice REST GUI.
 * [Git][] - Version control.
@@ -21,7 +21,8 @@
 
 | Date | Topic | Notes |
 |------|-------|-------|
-| 01-14-2020 | Class Introduction | Introduced class and started discussing requests.
+| 01-14-2020 | Class Introduction | Introduced class and started discussing requests. |
+| 01-16-2020 | Environment Setup | **[Homework 1](/homework/cybr406-hwk1.docx) Due 01-21-2020 End of Day**.<br/>Used classtime to set up software & accounts.<br/>Used class time to experiment with requests using echo server.
 
 # Class Topics
 
@@ -71,7 +72,7 @@
 [Postman]: https://www.getpostman.com
 [Heroku Project Setup]: /notes/heroku-project-setup.md
 [GitHub + Heroku Project Setup]: /notes/github-project-setup.md
-[Git]: /notes/git.md
+[Git]: https://git-scm.com/downloads
 [IntelliJ Community Edition]: https://www.jetbrains.com/idea/
 [7Zip]: https://www.7-zip.org/
 [Putty]: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
