@@ -25,7 +25,7 @@
 | 01-14-2020 | Class Introduction | Introduced class and started discussing requests. |
 | 01-16-2020 | Environment Setup | **[Homework 1](/homework/cybr406-hwk1.docx) Due 01-21-2020 End of Day**.<br/>Used classtime to set up software & accounts.<br/>Used class time to experiment with requests using echo server.
 | 01-21-2020 | Spring Basics | Questions about Homework<br/>Finish setting up environments<br/>**Presentation: [Spring Basics][]** |
-| 01-23-2020 | Spring Basics (cont.) | Continue Spring Basics |
+| 01-23-2020 | Spring Basics (cont.) | Continue Spring Basics<br/>**Demo App: [Spring Basics][]** |
 
 # Class Topics
 
@@ -98,6 +98,7 @@
 
 <!-- Demos -->
 [Books Demo]: https://github.com/ryl/cybr406-books
+[Spring Basics]: https://github.com/ryl/cybr406-basics
 
 <!-- Homework -->
 [Homework 2]: /homework/homework02-persisted-database.md
