@@ -8,6 +8,8 @@
 
 * [Spring Boot Initializer][] - Generate project skeletons.
 * [Common Spring Properties][] - Adjust the many settings provided by Spring.
+* [Spring Reference][] - Annotations, classes, and files used in class.
+* [IDE Survival Guide][] - Useful IDE tips & tricks.
 
 # Software
 
@@ -97,6 +99,8 @@
 [Event Handler Shortcomings]: /notes/event-handler-shortcomings.md
 [Security - OAuth]: /notes/security-oauth.md
 [blog-wrap-up]: /notes/blog-odd-and-ends.md
+[Spring Reference]: /notes/spring-reference.md
+[IDE Survival Guide]: /notes/ide-survival-guide.md
 
 <!-- Demos -->
 [Books Demo]: https://github.com/ryl/cybr406-books
