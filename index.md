@@ -10,6 +10,7 @@
 * [Common Spring Properties][] - Adjust the many settings provided by Spring.
 * [Spring Reference][] - Annotations, classes, and files used in class.
 * [IDE Survival Guide][] - Useful IDE tips & tricks.
+* [GIT Presentation][] - Basics of using Git for homework.
 
 # Software
 
