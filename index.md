@@ -89,6 +89,7 @@
 
 <!-- Files -->
 [Spring Basics]: /files/spring-boot-basics.pptx
+[GIT Presentation]: /files/working-with-git-github.pptx
 
 <!-- Notes -->
 [Database Migrations]: /notes/database-migrations.md
