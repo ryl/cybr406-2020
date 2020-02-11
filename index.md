@@ -33,7 +33,7 @@
 | 01-30-2020 | Todo Project | **[Todo Project](https://github.com/ryl/cybr406-todo) Due 02-04-2020 End of Day**<br/>**Work Day:** Put your knowledge of the basics to work in a project. |
 | 02-04-2020 | Todo Project (cont.) | Another day of in class work.<br/>Discuss how to submit project for grading. |
 | 02-06-2020 | Todo Project (cont.) | Another day of in class work.<br/>Discuss how to submit project for grading. |
-| 02-10-2020 | Start Databases | Help get project submitted.<br/>Start discussing databases. **Presentation: [Databases][]** |
+| 02-11-2020 | Start Databases | Help get project submitted.<br/>Start discussing databases.<br/>**Presentation: [Databases][]** |
 
 # Class Topics
 
