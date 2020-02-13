@@ -34,6 +34,7 @@
 | 02-04-2020 | Todo Project (cont.) | Another day of in class work.<br/>Discuss how to submit project for grading. |
 | 02-06-2020 | Todo Project (cont.) | Another day of in class work.<br/>Discuss how to submit project for grading. |
 | 02-11-2020 | Start Databases | Help get project submitted.<br/>Start discussing databases.<br/>**Presentation: [Databases][]** |
+| 02-13-2020 | Databases (cont.) | Continue discussing databases.<br/>Begin covering JPA. |
 
 # Class Topics
 
