@@ -34,6 +34,11 @@
 | 02-04-2020 | Todo Project (cont.) | Another day of in class work.<br/>Discuss how to submit project for grading. |
 | 02-06-2020 | Todo Project (cont.) | Another day of in class work.<br/>Discuss how to submit project for grading. |
 | 02-11-2020 | Start Databases | Help get project submitted.<br/>Start discussing databases.<br/>**Presentation: [Databases][]** |
+| 02-13-2020 | Databases (cont.) | SQL injection attack<br/>JPA |
+| 02-18-2020 | Databases (cont.) | More JPA |
+| 02-20-2020 | Database Project | Convert Todo application to JPA. |
+| 02-25-2020 | Databases Migrations | Manage database changes over time with migrations. |
+| TBD | Migration Homework | Add database migrations to the TODO app. |
 
 # Class Topics
 
