@@ -10,6 +10,9 @@
 * [Common Spring Properties][] - Adjust the many settings provided by Spring.
 * [Spring Reference][] - Annotations, classes, and files used in class.
 * [IDE Survival Guide][] - Useful IDE tips & tricks.
+* [Spring Basics Presentation][] - Basics of handling requests in Spring.
+* [Databases Presentation][] - Covers JDBC and JPA
+* [Database Migrations Presentation][] - Manage database changes in any environment.
 * [GIT Presentation][] - Basics of using Git for homework.
 
 # Software
@@ -27,18 +30,22 @@
 |------|-------|-------|
 | 01-14-2020 | Class Introduction | Introduced class and started discussing requests. |
 | 01-16-2020 | Environment Setup | **[Homework 1](/homework/cybr406-hwk1.docx) Due 01-21-2020 End of Day**.<br/>Used classtime to set up software & accounts.<br/>Used class time to experiment with requests using echo server.
-| 01-21-2020 | Spring Basics | Questions about Homework<br/>Finish setting up environments<br/>**Presentation: [Spring Basics][]** |
+| 01-21-2020 | Spring Basics | Questions about Homework<br/>Finish setting up environments<br/>**Presentation: [Spring Basics Presentation][]** |
 | 01-23-2020 | Spring Basics (cont.) | Continue Spring Basics<br/>**Demo App: [Spring Basics][]** |
 | 01-28-2020 | Spring Basics (cont.) | Finish Spring Basics. |
 | 01-30-2020 | Todo Project | **[Todo Project](https://github.com/ryl/cybr406-todo) Due 02-04-2020 End of Day**<br/>**Work Day:** Put your knowledge of the basics to work in a project. |
 | 02-04-2020 | Todo Project (cont.) | Another day of in class work.<br/>Discuss how to submit project for grading. |
 | 02-06-2020 | Todo Project (cont.) | Another day of in class work.<br/>Discuss how to submit project for grading. |
-| 02-11-2020 | Start Databases | Help get project submitted.<br/>Start discussing databases.<br/>**Presentation: [Databases][]** |
+| 02-11-2020 | Start Databases | Help get project submitted.<br/>Start discussing databases.<br/>**[Databases Presentation][]** |
 | 02-13-2020 | Databases (cont.) | SQL injection attack<br/>JPA |
 | 02-18-2020 | Databases (cont.) | More JPA |
 | 02-20-2020 | Database Project | Convert Todo application to JPA. |
-| 02-25-2020 | Databases Migrations | Manage database changes over time with migrations. |
+| 02-25-2020 | Databases Migrations | **Convert Todo application to JPA Due 02-25-2020 End of Day.**<br/>**[Database Migrations Presentation][]** - Manage database changes over time with migrations. |
 | TBD | Migration Homework | Add database migrations to the TODO app. |
+| TBD | Rest Repositories | |
+| TBD | Post App | |
+| TBD | Security - Basics | |
+| TBD | Security - CSRF | |
 
 # Class Topics
 
@@ -95,9 +102,10 @@
 [Atom]: https://atom.io/
 
 <!-- Files -->
-[Spring Basics]: /files/spring-boot-basics.pptx
+[Spring Basics Presentation]: /files/spring-boot-basics.pptx
+[Databases Presentation]: /files/databases.pptx
+[Database Migrations Presentation]: /files/database-migrations.pptx
 [GIT Presentation]: /files/working-with-git-github.pptx
-[Databases]: /files/databases.pptx
 
 <!-- Notes -->
 [Database Migrations]: /notes/database-migrations.md
