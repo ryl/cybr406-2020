@@ -40,9 +40,10 @@
 | 02-13-2020 | Databases (cont.) | SQL injection attack<br/>JPA |
 | 02-18-2020 | Databases (cont.) | More JPA |
 | 02-20-2020 | Database Project | Convert Todo application to JPA. |
-| 02-25-2020 | Databases Migrations | **Convert Todo application to JPA Due 02-25-2020 End of Day.**<br/>**[Database Migrations Presentation][]** - Manage database changes over time with migrations. |
-| TBD | Migration Homework | Add database migrations to the TODO app. |
-| TBD | Rest Repositories | |
+| 02-25-2020 | Databases Migrations | **Convert Todo application to JPA Due 02-27-2020 End of Day.**<br/>**[Database Migrations Presentation][]** - Manage database changes over time with migrations. |
+| 02-27-2020 | Database Migrations | Looked at how to generate a changelog and why its useful |
+| 03-03-2020 | Migration Homework | **Homework 3: Add database migrations to the TODO app. Due 03-10-2020 End of Day**<br/>Work Day |
+| 03-05-2020 | Rest Repositories | |
 | TBD | Post App | |
 | TBD | Security - Basics | |
 | TBD | Security - CSRF | |
