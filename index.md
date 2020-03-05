@@ -10,10 +10,13 @@
 * [Common Spring Properties][] - Adjust the many settings provided by Spring.
 * [Spring Reference][] - Annotations, classes, and files used in class.
 * [IDE Survival Guide][] - Useful IDE tips & tricks.
+
+# Presentations
 * [Spring Basics Presentation][] - Basics of handling requests in Spring.
 * [Databases Presentation][] - Covers JDBC and JPA
 * [Database Migrations Presentation][] - Manage database changes in any environment.
 * [GIT Presentation][] - Basics of using Git for homework.
+* [Spring Data REST][] - Build RESTful APIs faster and easier.
 
 # Software
 
@@ -43,10 +46,11 @@
 | 02-25-2020 | Databases Migrations | **Convert Todo application to JPA Due 02-27-2020 End of Day.**<br/>**[Database Migrations Presentation][]** - Manage database changes over time with migrations. |
 | 02-27-2020 | Database Migrations | Looked at how to generate a changelog and why its useful |
 | 03-03-2020 | Migration Homework | **Homework 3: Add database migrations to the TODO app. Due 03-10-2020 End of Day**<br/>Work Day |
-| 03-05-2020 | Rest Repositories | |
+| 03-05-2020 | Rest Repositories | **[Spring Data REST Presentation][]** |
 | TBD | Post App | |
 | TBD | Security - Basics | |
 | TBD | Security - CSRF | |
+| 03-22-2020 - 03-29-2020 | Spring Break
 
 # Class Topics
 
@@ -107,6 +111,7 @@
 [Databases Presentation]: /files/databases.pptx
 [Database Migrations Presentation]: /files/database-migrations.pptx
 [GIT Presentation]: /files/working-with-git-github.pptx
+[Spring Data REST Presentation]: /files/working-with-git-github.pptx
 
 <!-- Notes -->
 [Database Migrations]: /notes/database-migrations.md
