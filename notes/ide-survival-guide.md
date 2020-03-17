@@ -19,3 +19,8 @@ hashCode can all be automatically created from here.
 
 `Alt + Enter`  
 Show recommended actions. Useful on red squiggly code. Can also be used to import static methods from classes, which can help make code less verbose.
+
+`Ctrl + H`
+Place your cursor on a class name and use `Ctrl + H` to bring up a class
+hierarchy. This is a good way to discover what classes extend a particular
+base class.

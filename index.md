@@ -50,6 +50,8 @@
 | 03-05-2020 | Rest Repositories | **[Spring Data REST Presentation][]** |
 | 03-10-2020 | Security - Basics | **[Security Presentation][]**<br/>Introduce basic security measures. |
 | 03-12-2020 | Security - CSRF | Take a closer look at CSRF attacks. |
+| 03-17-2020 | Security | Finish up discussing basic security<br/>Take a look allowing users to sign up.<br/>**This will be the last in-person class!**<br/>Future classes will be conducted online via VidGrid/Zoom/Slack. |
+| 03-19-2020 | Security Homework | First online class. I will assign security homework. |
 | 03-22-2020 - 03-29-2020 | Spring Break
 
 # Class Topics
