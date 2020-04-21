@@ -74,7 +74,7 @@ Features for handling web requests and returning responses.
 * [Validation Using JSR-303 Annotations](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#validation-beanvalidation-overview)
 
 #### @Controller, @RestController  
-Annotate classes that handle web requests.
+Annotate classes that handle web requests. `@RestController` will automatically transform the annotated method's return value into JSON.
 
 #### @RequestMapping
 Annotates a method, describing which HTTP requests it should handle. By default
@@ -90,6 +90,9 @@ specificity.
 #### @RequestParameter  
 Maps a request parameter to a method argument. By default, the name of the
 method argument is expected to match the name of the request parameter.
+
+#### @RequestHeader
+Maps a request header to a method argument.
 
 #### @PathVariable  
 Used in conjunction with `@RequestMapping` and its derivatives. Maps a portion
@@ -126,6 +129,110 @@ private ResponseEntity<List<User>> someMethod() { ... }
 // Can be used without type parameters.
 private ResponseEntity someMethod() { ... }
 ```
+
+# Databases
+
+#### Embedded Database
+
+A database that can be bundled with the application and stores data in memory.
+When the application is restarted, all data is lost.
+
+Pros:
+* Rapid prototyping
+* No need to install and configure a database
+
+Cons:
+* Not suitable for production where data must survive app restarts and crashes.
+
+#### Persisted Database
+
+A database that persists data to disk and must be installed and configured
+separately from the application.
+
+Pros:
+* Suitable for production applications since data survives regardless of
+  application restarts and crashes.
+
+Cons:
+* Additional knowledge required to install, run, and configure.
+* Cannot be bundled with the application.
+
+#### JDBCTemplate
+
+* [Insert Example](https://github.com/ryl/cybr406-books-demo/blob/0849404fda2ebe4df503dd9adc12f5bbe469fdb5/src/main/java/com/cybr406/bookdemo/BookDemoController.java#L23-L43)
+* [Select Example](https://github.com/ryl/cybr406-books-demo/blob/0849404fda2ebe4df503dd9adc12f5bbe469fdb5/src/main/java/com/cybr406/bookdemo/BookDemoController.java#L50-L61)
+* [Update Example](https://github.com/ryl/cybr406-books-demo/blob/0849404fda2ebe4df503dd9adc12f5bbe469fdb5/src/main/java/com/cybr406/bookdemo/BookDemoController.java#L90)
+
+`JDBCTemplate` allows you to write SQL queries. It Simplifies the use of JDBC
+and helps to avoid common errors. Unlike JPA, no SQL is generated for you by the
+application.
+
+#### @Entity
+
+* [Class Example](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/Author.java#L7)
+
+Annotates a Java class that can be stored into a database table. The fields of
+the Java class map to columns in the database.
+
+#### @Id
+
+* [Class Example](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/Author.java#L10)
+
+Annotates a field in a Java class annotated with `@Entity`. It indicates that
+the field is the primary key of the entity.
+
+#### @GeneratedValue
+
+* [Class Example](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/Author.java#L11)
+
+When paired with `@Id` on a field, this annotation provides the strategy for the
+values of primary keys. In this class we use the `GenerationType.IDENTITY`
+strategy to use auto-incrementing long values as primary keys.
+
+#### @OneToMany
+When placed on a field in a Java class, this annotation indicates a parent/child
+relationship between classes.
+
+#### @ManyToMany
+
+* [Class Example](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/Author.java#L21)
+
+When placed on a field in a Java class, this annotation indicates a many to many
+relationship between classes. A join table is use to related the classes
+together.
+
+#### @Repository, @RepositoryRestResource
+
+* [AuthorRepository](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/AuthorRepository.java)
+* [BookRepository](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/BookRepository.java)
+
+`@Repository` annotates an interface that provides database CRUD (Create,
+Retrieve, Update, Delete) operations for classes annotated with `@Entity`.
+Carefully named methods can be added to the interface to add specialized queries
+not present in the base interface.
+
+`@RepositoryRestResource` plays the same role as `@Repository`, but will
+additionally automatically expose a RESTful API for managing the repository's
+objects.
+
+#### Liquibase Migrations
+Liquibase database migrations manage the structure of the database required by your application.
+
+Pros:
+* Only apply database changes when need.
+* Data types are generic and converted to the correct type for the database you are using.
+
+Cons:
+* Rapid prototyping is difficult because you need to regularly update the changelog.
+* Takes time to create the changelog.
+
+#### dbchangelog-master.xml
+
+* [Class Example](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/resources/db/changelog/db.changelog-master.xml)
+
+A collection of database alterations that describe your database. This file
+evolves over time with your application and database. Change sets are added as
+need to updated the database to match the needs of the application.
 
 ## Security
 
