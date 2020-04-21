@@ -1,6 +1,6 @@
 # Spring Reference
 
-A list of annotations, classes, and files used in class.
+A list of concepts, annotations, classes, and files used in class.
 
 ## Bootstrapping
 
@@ -127,10 +127,9 @@ private ResponseEntity someMethod() { ... }
 
 ## Security
 
-### WebSecurityConfigurerAdapter
-
-* [Class Example](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/SecurityConfiguration.java#L22)
-* [`configure(HttpSecurity http)` Example](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/SecurityConfiguration.java#L63-L78)
+##### WebSecurityConfigurerAdapter  
+* [Class Example](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/SecurityConfiguration.java#L22),
+* [Configure HttpSecurity Example](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/SecurityConfiguration.java#L63-L78)
 
 Main configuration class for customizing a web application's security settings.
 Extend this class and override the `configure(HttpSecurity http)` method. Many
@@ -140,20 +139,27 @@ important security features can be adjusted from `configure` such as:
 * enable/disable CSRF protection
 * configure session management, or choose stateless
 
-### `@EnableGlobalMethodSecurity`
+##### @EnableGlobalMethodSecurity
 
 * [Documentation](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#globalmethodsecurityconfiguration)
+* [Class Example](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/SecurityConfiguration.java#L20)
 
 Enables Spring Security global method security.
 
 The `WebSecurityConfigurerAdapter::configure` method offers **broad** security
 configuration options, but it has limitations. For example, you cannot easily
 prevent one user from editing resources owned by another user.
+`@EnableGlobalMethodSecurity` addresses the problem by giving you **granular**
+control over when a Java method can be executed. Once global method security is
+enabled, you can use `@PreAuthorize` and `@PostAuthorize` to finely adjust the
+security requirements for a particular method.
 
-`@EnableGlobalMethodSecurity` can address the problem by giving you **granular**
-control over when a Java method can be executed.
+##### @PreAuthorize
 
-### SQL Injection  
+##### @PostAuthorize
+Adding
+
+##### SQL Injection  
 
 * [Concept][SQL Injection Concept]
 * [Class Example][SQL Injection Class Example]
@@ -173,7 +179,7 @@ such as the '?' character.
 
 * [See the `updateNameSafe` method for an example of a safe method][SQL Injection Class Example].
 
-### Cross Site Request Forgery
+##### Cross Site Request Forgery (CSRF)
 
 * [Concept][csrf concept]
 * [Documentation][csrf documentation]
