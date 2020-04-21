@@ -127,7 +127,7 @@ private ResponseEntity someMethod() { ... }
 
 ## Security
 
-##### WebSecurityConfigurerAdapter  
+#### WebSecurityConfigurerAdapter  
 * [Class Example](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/SecurityConfiguration.java#L22),
 * [Configure HttpSecurity Example](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/SecurityConfiguration.java#L63-L78)
 
@@ -139,7 +139,7 @@ important security features can be adjusted from `configure` such as:
 * enable/disable CSRF protection
 * configure session management, or choose stateless
 
-##### @EnableGlobalMethodSecurity
+#### @EnableGlobalMethodSecurity
 
 * [Documentation](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#globalmethodsecurityconfiguration)
 * [Class Example](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/SecurityConfiguration.java#L20)
@@ -154,12 +154,12 @@ control over when a Java method can be executed. Once global method security is
 enabled, you can use `@PreAuthorize` and `@PostAuthorize` to finely adjust the
 security requirements for a particular method.
 
-##### @PreAuthorize
+#### @PreAuthorize
 
-##### @PostAuthorize
+#### @PostAuthorize
 Adding
 
-##### SQL Injection  
+#### SQL Injection  
 
 * [Concept][SQL Injection Concept]
 * [Class Example][SQL Injection Class Example]
@@ -179,7 +179,7 @@ such as the '?' character.
 
 * [See the `updateNameSafe` method for an example of a safe method][SQL Injection Class Example].
 
-##### Cross Site Request Forgery (CSRF)
+#### Cross Site Request Forgery (CSRF)
 
 * [Concept][csrf concept]
 * [Documentation][csrf documentation]
