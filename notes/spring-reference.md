@@ -22,23 +22,47 @@ Features for configuration, class dependencies, and code reuse.
 * [Annotation-based Container Configuration](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-annotation-config)
 
 `ApplicationContext`  
-A big "tool bag" holding many "tools" (classes configured by Spring and you
-application).
+A big "tool bag" containing many "tools". The tools are classes configured by
+Spring or your application. It is the central interface to provide configuration
+for an application. Often referred to as the "Spring container".
+
+`@Configuration`
+Indicates that a class declares one or more `@Bean` methods.
+
+`@Bean`
+Indicates that a method produces a bean to be managed by the Spring container.
+Similar to `@Component` in that the object returned by the method is added to
+the `ApplicationContext` and can be `@Autowired` elsewhere. They appear within
+classes annotated with `@Configuration`
 
 `@Component`  
 Annotates a class for reuse throughout the application. Adds your class to the
-tool bag.
+tool bag (the `ApplicationContext`).
 
 `@Autowired`  
 Annotates a field indicating that class should be fetched from the
 ApplicationContext. It marks the location where you want to use a tool from the
 tool bag.
 
+Profiles  
+[Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-profiles)  
+Spring Profiles provide a way to segregate parts of your application
+configuration and make it be available only in certain environments.
+
 `application.properties`  
+[Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config-application-property-files),
+[Profile-specific Properties](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config-profile-specific-properties)  
 A file containing name/value pairs that configure the application. You can add
-your own name/value pairs here to further customize your application
+your own name/value pairs here to further customize your application. You can
+configure different values for different profiles by creating additional
+properties files following the naming convention
+`application-{profile}.properties`.
+
 
 `@Value`  
+[Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config),
+[@Value Class Example](https://github.com/ryl/cybr406-gateway/blob/5f774348741fbe6929985d549a648ce2acea4add/src/main/java/com/cybr406/gateway/GatewayApplication.java#L13) with
+[application.properties](https://github.com/ryl/cybr406-gateway/blob/master/src/main/resources/application.properties#L3)  
 Inject a value from `application.properties` into a property in one of your
 classes.
 
@@ -101,6 +125,79 @@ private ResponseEntity<List<User>> someMethod() { ... }
 private ResponseEntity someMethod() { ... }             
 ```
 
+## Security
+
+### WebSecurityConfigurerAdapter
+
+* [Class Example](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/SecurityConfiguration.java#L22)
+* [`configure(HttpSecurity http)` Example](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/SecurityConfiguration.java#L63-L78)
+
+Main configuration class for customizing a web application's security settings.
+Extend this class and override the `configure(HttpSecurity http)` method. Many
+important security features can be adjusted from `configure` such as:
+
+* Security requirements for URLS based on path, method, etc.
+* enable/disable CSRF protection
+* configure session management, or choose stateless
+
+### `@EnableGlobalMethodSecurity`
+
+* [Documentation](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#globalmethodsecurityconfiguration)
+
+Enables Spring Security global method security.
+
+The `WebSecurityConfigurerAdapter::configure` method offers **broad** security
+configuration options, but it has limitations. For example, you cannot easily
+prevent one user from editing resources owned by another user.
+
+`@EnableGlobalMethodSecurity` can address the problem by giving you **granular**
+control over when a Java method can be executed.
+
+### SQL Injection  
+
+* [Concept][SQL Injection Concept]
+* [Class Example][SQL Injection Class Example]
+* [XKCD Comic][]
+
+A vulnerability that allows a malicious user to run SQL on the server. A
+carefully crafted statement can cause sensitive data to be leaked, deleted, or
+entire databases to be dropped. Often exploits SQL queries built using
+String concatenation.
+
+* [See the `updateNameDangerous` method for an example of a vulnerable method][SQL Injection Class Example].
+* [More examples (scroll towards the bottom)][SQL Injection Concept]
+
+This vulnerability can be fixed with **prepared statements**, which clearly
+segment inputs from the rest of the SQL statement using a special placeholder
+such as the '?' character.
+
+* [See the `updateNameSafe` method for an example of a safe method][SQL Injection Class Example].
+
+### Cross Site Request Forgery
+
+* [Concept][csrf concept]
+* [Documentation][csrf documentation]
+* [Synchronizer Token Pattern][]
+* [When to use CSRF protection][]
+* [Good Site][]
+* [Bad Site][]
+
+An attack that takes advantage of someone's existing logged in session on
+another website. Bad Site demonstrates this by using hidden form fields to
+submit a request to Good Site. If Good Site does not have measures in place to
+prevent this abuse, Bad Site can transfer funds out of a victim's bank account.
+
+This attack can be prevented by including a secret token in a request that only
+[requiring a secret value][Synchronizer Token Pattern] that external websites
+cannot guess. Spring has this form of CSRF protection **enabled by default.**
+
+[In some cases, CSRF protection may not be necessary][When to use CSRF protection].
+For example, stateless applications not meant to be accessed directly through a
+browser (like the API's we create in class). In the case of the applications
+written during this class, CSRF protection can be disabled when we make the
+application stateless, which prevents our application from ever creating a
+session with the client.
+
 ## Testing
 
 `@Test`  
@@ -115,3 +212,17 @@ Adds a `MockMvc` class to the ApplicationContext to help test web applications.
 `@ActiveProfiles`  
 Annotates a class, enabling the given profiles for all the tests within the
 class. Useful for testing out different application configurations.
+
+
+<!-- CSRF References -->
+[CSRF Concept]: https://owasp.org/www-community/attacks/csrf
+[CSRF Documentation]: https://docs.spring.io/spring-security/site/docs/current/reference/html5/#csrf
+[Synchronizer Token Pattern]: https://docs.spring.io/spring-security/site/docs/current/reference/html5/#csrf-protection-stp
+[When to use CSRF protection]: https://docs.spring.io/spring-security/site/docs/current/reference/html5/#csrf-when
+[Good Site]: https://github.com/ryl/cybr406-goodsite
+[Bad Site]: https://github.com/ryl/cybr406-badsite
+
+<!-- SQL Injection References -->
+[SQL Injection Concept]: https://owasp.org/www-community/attacks/SQL_Injection
+[SQL Injection Class Example]: https://github.com/ryl/cybr406-books-demo/blob/0849404fda2ebe4df503dd9adc12f5bbe469fdb5/src/main/java/com/cybr406/bookdemo/BookDemoController.java#L81-L92
+[XKCD Comic]: https://xkcd.com/327/)

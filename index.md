@@ -53,6 +53,8 @@
 | 03-17-2020 | Security | Finish up discussing basic security<br/>Take a look allowing users to sign up.<br/>**This will be the last in-person class!**<br/>Future classes will be conducted online via VidGrid/Zoom/Slack. |
 | 03-19-2020 | Security Homework | First online class. I will assign security homework. |
 | 03-22-2020 - 03-29-2020 | Spring Break
+| 03-31-2020 | WebClient | Introduce WebClient for consuming web services. |
+| 04-02-2020 | Blog | Communicate user role between Account and Post. |
 
 # Class Topics
 
