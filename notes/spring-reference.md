@@ -159,6 +159,7 @@ security requirements for a particular method.
 #### @PreAuthorize
 
 * [Documentation][Pre Post Authorize]
+* [Class Example](https://github.com/ryl/cybr406-books-demo/blob/master/src/main/java/com/cybr406/bookdemo/AuthorEventHandler.java#L25)
 
 Adds a security expression to a method that must pass before the method will be
 executed. May examine method arguments, but cannot access the method's return
